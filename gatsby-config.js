@@ -1,3 +1,5 @@
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,6 +8,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        tables: [
+          {
+            baseId: `app4Eb0X39KtGToOS`,
+            tableName: `Events`,
+            tableView: `Grid`,
+          },
+        ]
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
