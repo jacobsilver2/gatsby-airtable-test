@@ -15,7 +15,7 @@ module.exports = {
         tables: [
           {
             baseId: `app4Eb0X39KtGToOS`,
-            tableName: `Events`,
+            tableName: `Future`,
             tableView: `Grid`,
           },
         ]

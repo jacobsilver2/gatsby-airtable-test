@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-airtable-petes",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Using Gatsby and Airtable - together!",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jacob Silver",
   "dependencies": {
     "dotenv": "^8.0.0",
     "gatsby": "^2.9.6",
