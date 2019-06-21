@@ -1,4 +1,4 @@
-
+// keyY11TcpoTR646Fh
 
 module.exports = {
   siteMetadata: {
@@ -11,12 +11,12 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: process.env.AIRTABLE_API_KEY,
+        apiKey: '',
         tables: [
           {
             baseId: `app4Eb0X39KtGToOS`,
-            tableName: `Future`,
-            tableView: `Grid`,
+            tableName: `Events`,
+            tableView: `Future`,
           },
         ]
       },
