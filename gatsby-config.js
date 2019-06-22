@@ -11,12 +11,12 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: process.env.AIRTABLE_API_KEY,
+        apiKey: 'keyY11TcpoTR646Fh',
         tables: [
           {
             baseId: `app4Eb0X39KtGToOS`,
-            tableName: `Future`,
-            tableView: `Grid`,
+            tableName: `Events`,
+            tableView: `Future`,
           },
         ]
       },
