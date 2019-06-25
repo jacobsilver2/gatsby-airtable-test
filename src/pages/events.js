@@ -6,15 +6,15 @@ import Parent from '../components/Parent';
 
 const AllFutureAirtableEventsQuery = graphql`
 query MyQuery {
-  allAirtable {
+  allAirtable (sort: {fields: data___Date, order: ASC}) {
     edges {
       node {
         id
         data {
-
           Name
           Date(formatString: "MMMM Do YYYY, h:mm a")
           Act_Blurb
+          Act_Website
           Act_Image {
             thumbnails {
               large {
@@ -45,6 +45,7 @@ const Events = () => (
               date={node.data.Date}
               description={node.data.Act_Blurb}
               image={node.data.Act_Image ? node.data.Act_Image[0].thumbnails.large.url : ''}
+              website={node.data.Act_Website ? node.data.Act_Website[0] : ''}
             />
           ))}
         </Layout>

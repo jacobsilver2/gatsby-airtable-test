@@ -1,12 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby";
 
 const StyledContainer = styled.div`
-  border: 1px solid black;
-  padding: 25px 12px 18px;
+  /* border: 1px solid black; */
+  padding: 1px 12px 18px;
   background: black;
+  height: 800px;
 `
-const Title = styled.h2`
+const Name = styled.h2`
   color: #fff;
   font-weight: 300;
   @media (max-width: 500px) {
@@ -28,59 +30,18 @@ const Description = styled.p`
     font-size: 0.75rem;
   }
 `
-const Actions = styled.div`
-  color: #333;
-  display: flex;
-  align-items: center;
-  svg {
-    transform: translateY(2px);
-    margin-right: 5px;
-  }
-  @media (max-width: 500px) {
-    flex-direction: column;
-    & button {
-      width: 100%;
-      margin-bottom: 4px;
-      font-size: 0.65rem;
-    }
-  }
+
+const StyledImage = styled.img`
+  text-align: center;
+  width: 200px;
 `
-const Action = styled.button`
-  margin: 0 5px;
-  padding: 8px 14px;
-  background: rgba(155, 155, 155, 0.2);
-  color: #fff;
-  cursor: pointer;
-  border: 1px solid #fff;
-  outline: 0;
-  font-weight: 300;
-  :hover {
-    opacity: 0.8;
-  }
-  :active {
-    background: black;
-  }
-`
-const Card = ({
-  title,
-  date,
-  description,
-  comments,
-  likes,
-  views,
-  actions,
-  image
-}) => (
+
+const Card = ({ name, date, description, image, website }) => (
   <StyledContainer>
-    <Title>{title}</Title>
+    {website ? <a href={website}><Name>{name}</Name></a> : <Name>{name}</Name>}
     <Date>{date}</Date>
     <Description>{description}</Description>
-    <img src={image} width='200px'/>
-    <Actions>
-      {actions.map(({ label }) => (
-        <Action>{label}</Action>
-      ))}
-    </Actions>
+    <StyledImage src={image} />
   </StyledContainer>
 )
 export default Card
